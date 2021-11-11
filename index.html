@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fundamentos2122.github.io/framework-css-AOF-D/css/framework.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Segundo Parcial, Lista de Tareas</title>
+</head>
+<body class="container-fluid">
+    
+    
+    
+    
+    <div class="row">
+        <div class="col-3">
+            Space
+        </div>
+        <div class="col-6 border border-primary">
+            <div class="row">
+                <div class="col-12">
+                    <div class="modal" id="modal_test">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Agregar tarea</h5>
+                                <button data-dismiss="#modal_test">X</button>
+                            </div>
+                            <!-- <div class="modal-header bg-danger">
+                                <h5>Es necesario poner un titulo</h5>
+                            </div> -->
+
+                            <form id="task" name="taskForm">
+                                <label for="title">Titulo:</label>
+                                <input type="text" name="title" autocomplete="off">
+                                <br>
+                                <label for="description">Descripcion:</label>
+                                <input type="password" name="description" autocomplete="off">
+                                <br>
+                                <label for="date">Fecha:</label>
+                                <input type="date" name="date" autocomplete="off">
+                                <br>
+                                <div class="modal-footer">
+                                    <!-- <button class="btn btn-secondary" data-dismiss="#modal_test">Close</button> -->
+                                    <button class="btn btn-primary">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+               </div>
+                <div class="col-12 main-title">
+                    <h1>Lista de tareas</h1>
+               </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="checkbox">
+                            <label for="vehicle1"> Mostrar todas.</label>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal_test">Nueva</button>
+                        </div>
+                    </div>
+
+               </div>
+
+                <div class="col-12">
+
+                    <div id="tasks">
+                        <!-- <div class="border-top">
+                            <h5>Titulo de tarea</h5>
+                            <p>Descripcion</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Fecha</p>
+                                </div>
+                                <div class="col-6">
+                                    <input type="checkbox" full="false">
+                                    <label for="vehicle1">Completada</label>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+               </div>
+            </div>
+        </div>
+        <div class="col-3">
+            Sapace
+        </div>
+
+    </div>
+
+
+    <script src="js/taskList.js"></script>
+    <script src="https://fundamentos2122.github.io/framework-css-AOF-D/js/framework.js"></script>
+</body>
+</html>
