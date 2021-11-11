@@ -34,14 +34,10 @@ function addTweet(e){
         date: taskForm["date"].value,
     };
 
-    if(data.title === null){
+    if(data.title.value === null){
         titulo();
         return;
     }
-
-
-
-    
     
     //Crear el nuevo elemento.
     const newTweet = document.createElement("div");
@@ -79,21 +75,20 @@ function titulo(){
 
 //Guardar Tweet en LocalStorage
 function saveTweet(data){
+    console.log(data);
+    let tasks = getTweets();
+    console.log(tasks);
+    
+    //Se añade a la lista de tweets.
+    tasks.push(data);
+    console.log(typeof(tasks));
+
 
     var json = JSON.stringify(data);
 
-    
     localStorage.setItem(tasksKey, json);
-   /*  console.log(json);
     
-    console.log(data); */
-    
-    let tasks = getTweets(json);
-
-    //Se añade a la lista de tweets.
-    tasks.push(data);
-    
-    localStorage.setItem(tasksKey, json);
+    //localStorage.setItem(tasksKey, JSON.stringify(tasks));
 
     //Guardar en LocalStorage.
     //localStorage.setItem(tasksKey, JSON.stringify(data));
@@ -101,11 +96,11 @@ function saveTweet(data){
 }
 
 //Obtiene los tweets de LocalStorage
-function getTweets(json){
+function getTweets(){
     //Obtenemos los datos de localStorage.
-    let tasks = localStorage.getItems(tasksKey);
+    let tasks = localStorage.getItem(tasksKey);
     
-    console.log(tasks);
+    
 
     //Verificamos si ya existe al menos uno.
     if(tasks === null){
